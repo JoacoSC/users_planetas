@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Users</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+</head>
+
+
+<body style="background: url(&quot;assets/img/space/mainBackground.jpg&quot;);">
+    <!-- Barra de navegacion -->
+    <nav class="navbar navbar-light navbar-expand-lg bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#">Astronomyapp</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nav Item</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nav Item</a></li>
+                </ul><button class="btn btn-primary shadow-sm" type="button" style="background: rgb(0,163,255);border-color: rgb(0,163,255);">Cerrar Sesión</button></div>
+        </div>
+    </nav>
+
+    <!-- Fin barra de navegacion -->
+
+    <!-- Boton mostrar video -->
+
+    <div class="container">
+        <div class="col-lg-2 offset-md-0 offset-lg-5 text-center" style="padding-top: 15px;padding-bottom: 15px;">
+            <button class="btn btn-primary" type="button" data-toggle="modal" href="#myModal" style="background: rgb(0,163,255); border-color: rgb(0,163,255);">Ver de nuevo</button>
+        </div>
+    </div>
+
+    <!-- Fin boton mostrar video -->
+
+    <!-- Juego -->
+    <div class="container" style="margin-bottom: 15px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="embed-responsive embed-responsive-16by9" style="color: rgba(0, 0, 0, 0);background: rgb(35, 31, 32);border-color: rgb(255,255,255);">
+                    <iframe class="embed-responsive-item" src="https://joacosc.github.io/planetas/" frameborder="0" style="max-height: 670px;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin juego -->
+
+    <!-- Modal -->
+    <div class="modal fade" role="dialog" tabindex="-1" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="min-width: fit-content;">
+                <div class="modal-header">
+                    <h4 class="modal-title">Los planetas</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="document.getElementById('myVideo').pause();"><span aria-hidden="true">×</span></button></div>
+                <!-- Video del modal -->
+                    <div class="modal-body">
+                        <video id="myVideo" width="640" height="352" controls autoplay="true">
+                            <source src="video/Los planetas_2.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                <!-- Fin video del modal -->
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal" onclick="document.getElementById('myVideo').pause();" style="background: rgb(0,163,255);border-color: rgb(0,163,255);color: rgb(255,255,255);">Saltar</button></div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal -->
+    <footer class="page-footer dark" style="background: rgb(0,33,51);">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-lg-4 offset-sm-2 offset-md-2 offset-lg-2 text-center">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright" style="background: rgb(0,0,0);">
+            <p>© 2020 Copyright Text</p>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/smoothproducts.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script type="text/javascript">
+        $(window).on('load',function(){
+            $('#myModal').modal('show');
+        });
+    </script>
+    <script>
+        var video = document.getElementById('myVideo');
+        video.volume = 0.5;
+    </script>
+    <script>
+        
+    </script>
+
+    <!-- <script>
+    var vid = document.getElementById("myVideo");
+    vid.onended = function() {
+      alert("The video has ended");
+    };
+    </script> -->
+</body>
+
+</html>
